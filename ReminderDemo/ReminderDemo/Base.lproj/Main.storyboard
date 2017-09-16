@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ReminderDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S1O-N5-Wzr">
+                                <rect key="frame" x="265" y="20" width="110" height="30"/>
+                                <state key="normal" title="ADD REMINDER"/>
+                                <connections>
+                                    <action selector="addReminder:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bOT-Ez-XHk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJ7-pt-kWi">
+                                <rect key="frame" x="0.0" y="20" width="143" height="30"/>
+                                <state key="normal" title="DELETE REMINDERS"/>
+                                <connections>
+                                    <action selector="deleteReminder:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F4I-Yn-bZh"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BGB-UQ-Ent">
+                                <rect key="frame" x="0.0" y="50" width="375" height="617"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RemCellID" id="Kbf-Hy-tp1" customClass="RemCell" customModule="ReminderDemo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Kbf-Hy-tp1" id="nfK-T3-uoo">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="osC-Ob-Xw2">
+                                <rect key="frame" x="0.0" y="451" width="375" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="514287295.05524302">
+                                    <!--2017-04-19 09:34:55 +0000-->
+                                </date>
+                            </datePicker>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i7y-4G-vLn">
+                                <rect key="frame" x="50" y="220" width="275" height="247"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mUf-8d-1hh">
+                                        <rect key="frame" x="122" y="108" width="30" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="OK"/>
+                                        <connections>
+                                            <action selector="okTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M4H-5a-dIe"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="mUf-8d-1hh" firstAttribute="centerY" secondItem="i7y-4G-vLn" secondAttribute="centerY" id="0Of-Pv-IPS"/>
+                                    <constraint firstItem="mUf-8d-1hh" firstAttribute="centerX" secondItem="i7y-4G-vLn" secondAttribute="centerX" id="iSm-T8-Uud"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="i7y-4G-vLn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="200" id="AFI-Dg-T0j"/>
+                            <constraint firstItem="i7y-4G-vLn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="50" id="BDj-cO-foE"/>
+                            <constraint firstItem="S1O-N5-Wzr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Cll-S1-cwi"/>
+                            <constraint firstItem="eJ7-pt-kWi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Czc-bn-WHI"/>
+                            <constraint firstItem="BGB-UQ-Ent" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Itw-gn-9wu"/>
+                            <constraint firstItem="osC-Ob-Xw2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ZGW-fg-DjI"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="BGB-UQ-Ent" secondAttribute="bottom" id="hEU-Yi-Exa"/>
+                            <constraint firstAttribute="trailing" secondItem="osC-Ob-Xw2" secondAttribute="trailing" id="ifK-iT-xf0"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="i7y-4G-vLn" secondAttribute="bottom" constant="200" id="jcv-1a-cN1"/>
+                            <constraint firstItem="eJ7-pt-kWi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="k67-uO-sie"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="osC-Ob-Xw2" secondAttribute="bottom" id="nhz-qG-cMg"/>
+                            <constraint firstAttribute="trailing" secondItem="S1O-N5-Wzr" secondAttribute="trailing" id="pcb-70-CEy"/>
+                            <constraint firstItem="BGB-UQ-Ent" firstAttribute="top" secondItem="eJ7-pt-kWi" secondAttribute="bottom" id="up2-ck-VYZ"/>
+                            <constraint firstAttribute="trailing" secondItem="BGB-UQ-Ent" secondAttribute="trailing" id="yLX-pn-xKZ"/>
+                            <constraint firstItem="BGB-UQ-Ent" firstAttribute="top" secondItem="S1O-N5-Wzr" secondAttribute="bottom" id="yv9-Ii-97z"/>
+                            <constraint firstAttribute="trailing" secondItem="i7y-4G-vLn" secondAttribute="trailing" constant="50" id="zM9-1D-i9g"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="containerview" destination="i7y-4G-vLn" id="JaI-Z0-hc4"/>
+                        <outlet property="datePicker" destination="osC-Ob-Xw2" id="3JY-6B-uoY"/>
+                        <outlet property="reminderTable" destination="BGB-UQ-Ent" id="xaG-sx-yQd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
+        </scene>
+    </scenes>
+</document>
